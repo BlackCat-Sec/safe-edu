@@ -1,0 +1,28 @@
+<svg width="320" height="80" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="80" rx="24" fill="transparent"/>
+  <g transform="translate(0 0)">
+    <rect x="4" y="4" width="72" height="72" rx="22" fill="#12303B"/>
+    <path d="M40 16L61 24.4V42C61 55.8 52.2 68.4 40 73.2C27.8 68.4 19 55.8 19 42V24.4L40 16Z" fill="url(#logoShield)"/>
+    <path d="M28 33.4C31.7 30.9 35.7 29.6 40 29.6C44.3 29.6 48.3 30.9 52 33.4V50.9C48.4 48.6 44.4 47.4 40 47.4C35.6 47.4 31.6 48.6 28 50.9V33.4Z" fill="#F7F2EA"/>
+    <path d="M40 29.6V47.4" stroke="#12303B" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M32.2 38.1H37.1" stroke="#2B7A78" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M42.9 38.1H47.8" stroke="#2B7A78" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M32.2 43.6H37.1" stroke="#F18A4B" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M42.9 43.6H47.8" stroke="#F18A4B" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="56.5" cy="22.5" r="7.5" fill="#F18A4B"/>
+    <path d="M56.5 18.3V26.7" stroke="#FFF8EF" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M60.7 22.5H52.3" stroke="#FFF8EF" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+  <text x="92" y="37" fill="#12303B" font-family="Sora, Arial, sans-serif" font-size="29" font-weight="800" letter-spacing="-0.6">
+    SafeEd
+  </text>
+  <text x="92" y="58" fill="#4B6170" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="600">
+    Safety literacy for real-world communities
+  </text>
+  <defs>
+    <linearGradient id="logoShield" x1="40" y1="16" x2="40" y2="73.2" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2B7A78"/>
+      <stop offset="1" stop-color="#17515D"/>
+    </linearGradient>
+  </defs>
+</svg>
