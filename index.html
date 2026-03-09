@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SafeEd | Safety literacy for real-world communities</title>
+  <meta
+    name="description"
+    content="SafeEd is a practical safety education platform for schools, colleges, NGOs, and workplaces across India."
+  >
+  <meta name="theme-color" content="#12303b">
+  <meta property="og:title" content="SafeEd">
+  <meta
+    property="og:description"
+    content="Practical learning tracks, verified emergency pathways, and community-ready safety education."
+  >
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <noscript>
+    <div class="noscript-banner">
+      SafeEd works best with JavaScript enabled because learning plans, saved progress, and the support drawer are interactive.
+    </div>
+  </noscript>
+
+  <header class="site-header">
+    <div class="announcement-bar">
+      <div class="container announcement-inner">
+        <p>Verified India-focused support pathways, local privacy, and offline-ready access.</p>
+        <a href="#action-center">Open the action center</a>
+      </div>
+    </div>
+
+    <div class="container nav-shell">
+      <a class="brand" href="#hero" aria-label="SafeEd home">
+        <img src="assets/brand/safeed-logo.svg" alt="SafeEd logo" width="192" height="48">
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+        data-action="toggle-nav"
+      >
+        Menu
+      </button>
+
+      <nav id="site-navigation" class="site-navigation" aria-label="Primary">
+        <a href="#agenda">Agenda</a>
+        <a href="#use-cases">Uses</a>
+        <a href="#planner">Planner</a>
+        <a href="#tracks">Tracks</a>
+        <a href="#action-center">Action Center</a>
+        <a href="#programs">Programs</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="ghost-button" type="button" data-action="toggle-theme" id="theme-toggle">
+          Switch theme
+        </button>
+        <button class="primary-button" type="button" data-action="toggle-support">
+          Need help now?
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="hero" class="hero-section section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Safety literacy for real-world communities</p>
+          <h1>SafeEd turns sensitive topics into clear action systems.</h1>
+          <p class="hero-lead">
+            This rebuild positions SafeEd as a deployable civic-edtech product: practical learning tracks, verified crisis pathways,
+            local-first learner planning, and a cleaner structure for future scale.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#tracks">Explore learning tracks</a>
+            <button class="secondary-button" type="button" data-action="toggle-support">
+              Open support drawer
+            </button>
+          </div>
+          <ul class="trust-list" aria-label="Trust markers">
+            <li>Trauma-aware content framing</li>
+            <li>Progress stored on-device only</li>
+            <li>Official India helplines referenced</li>
+          </ul>
+        </div>
+
+        <aside class="hero-panel reveal" aria-label="Project snapshot">
+          <div class="metric-grid">
+            <article class="metric-card">
+              <strong>6</strong>
+              <span>practical learning tracks</span>
+            </article>
+            <article class="metric-card">
+              <strong>6</strong>
+              <span>verified support pathways</span>
+            </article>
+            <article class="metric-card">
+              <strong>3</strong>
+              <span>deployment-ready program formats</span>
+            </article>
+            <article class="metric-card">
+              <strong>PWA</strong>
+              <span>installable and offline-friendly</span>
+            </article>
+          </div>
+
+          <div class="focus-panel">
+            <p class="focus-label">Current agenda</p>
+            <h2>Prevention, response, and confidence-building in one product flow.</h2>
+            <p>
+              SafeEd is best suited for campus orientation, NGO facilitation, workplace awareness campaigns,
+              parent sessions, and community referral support.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="agenda" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Agenda</p>
+          <h2>What this project is meant to do</h2>
+          <p>
+            SafeEd is not a generic content site. Its agenda is to make safety education actionable, context-aware,
+            and easier to operationalize across schools, colleges, NGOs, communities, and workplaces.
+          </p>
+        </div>
+
+        <div class="agenda-grid">
+          <article class="agenda-card reveal">
+            <h3>Prevent earlier</h3>
+            <p>Build pattern recognition around harassment, coercion, digital threats, and unsafe escalation.</p>
+          </article>
+          <article class="agenda-card reveal">
+            <h3>Respond better</h3>
+            <p>Help learners document incidents, locate official channels, and choose safe next steps under pressure.</p>
+          </article>
+          <article class="agenda-card reveal">
+            <h3>Support recovery</h3>
+            <p>Include emotional first-response principles, referral pathways, and non-judgmental language.</p>
+          </article>
+          <article class="agenda-card reveal">
+            <h3>Scale responsibly</h3>
+            <p>Keep the frontend maintainable, accessible, offline-capable, and ready for content ops or backend integration.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="use-cases" class="section section--alt">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Uses</p>
+          <h2>Where SafeEd fits in practice</h2>
+          <p>The product is now framed as a reusable program layer rather than a single demo page.</p>
+        </div>
+
+        <div class="use-case-grid">
+          <article class="use-card reveal">
+            <span class="use-card__tag">Schools and colleges</span>
+            <h3>Orientation and awareness weeks</h3>
+            <p>Run structured tracks during onboarding, anti-ragging campaigns, digital citizenship weeks, and counseling initiatives.</p>
+          </article>
+          <article class="use-card reveal">
+            <span class="use-card__tag">NGOs and facilitators</span>
+            <h3>Field-ready workshop support</h3>
+            <p>Use the action center, learning briefs, and local planner as a lightweight facilitation toolkit.</p>
+          </article>
+          <article class="use-card reveal">
+            <span class="use-card__tag">Workplaces</span>
+            <h3>Awareness and upskilling</h3>
+            <p>Support prevention, reporting confidence, and refresher learning in HR, POSH, and people-ops programs.</p>
+          </article>
+          <article class="use-card reveal">
+            <span class="use-card__tag">Families and communities</span>
+            <h3>Trusted safety reference point</h3>
+            <p>Provide a calm, credible place to start when someone needs help, referral links, or a safer language framework.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="planner" class="section">
+      <div class="container planner-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Planner</p>
+          <h2>Build a local learning plan</h2>
+          <p>
+            The previous fake login has been replaced with a local learner planner. Profile data never leaves the browser.
+          </p>
+        </div>
+
+        <div class="planner-card reveal">
+          <form id="planner-form" class="planner-form">
+            <label>
+              <span>Name</span>
+              <input id="planner-name" name="name" type="text" maxlength="40" placeholder="A learner or facilitator">
+            </label>
+            <label>
+              <span>Primary role</span>
+              <select id="planner-role" name="role">
+                <option value="student">Student</option>
+                <option value="educator">Educator</option>
+                <option value="parent">Parent or caregiver</option>
+                <option value="ngo">NGO facilitator</option>
+                <option value="workplace">Workplace ally</option>
+              </select>
+            </label>
+            <label>
+              <span>Main goal</span>
+              <select id="planner-goal" name="goal">
+                <option value="prevention">Prevention</option>
+                <option value="response">Reporting and response</option>
+                <option value="digital">Digital safety</option>
+                <option value="wellbeing">Wellbeing support</option>
+                <option value="leadership">Facilitation and leadership</option>
+              </select>
+            </label>
+            <label>
+              <span>Time available each week</span>
+              <select id="planner-minutes" name="minutes">
+                <option value="30">30 minutes</option>
+                <option value="45">45 minutes</option>
+                <option value="60">60 minutes</option>
+                <option value="90">90 minutes</option>
+              </select>
+            </label>
+            <button class="primary-button" type="submit">Save learning plan</button>
+          </form>
+        </div>
+
+        <aside class="planner-output reveal" aria-live="polite">
+          <div class="planner-output__header">
+            <p class="eyebrow">Recommended path</p>
+            <h3 id="planner-title">Three tracks to start with</h3>
+          </div>
+          <div id="planner-recommendations" class="planner-recommendations"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="tracks" class="section section--alt">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Learning studio</p>
+          <h2>Structured tracks with practical outcomes</h2>
+          <p>Search, filter, open the brief, and track completion locally.</p>
+        </div>
+
+        <div class="track-toolbar reveal">
+          <label class="search-field">
+            <span class="sr-only">Search tracks</span>
+            <input id="track-search" type="search" placeholder="Search by topic, audience, or outcome">
+          </label>
+          <div id="track-filters" class="filter-group" aria-label="Track filters"></div>
+        </div>
+
+        <div class="summary-strip reveal" id="summary-strip" aria-live="polite"></div>
+        <div id="track-grid" class="track-grid"></div>
+      </div>
+    </section>
+
+    <section id="action-center" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Action center</p>
+          <h2>When someone needs support now</h2>
+          <p>
+            This section prioritizes official and widely used India-focused support routes. SafeEd is educational and should not replace
+            emergency, legal, or clinical advice.
+          </p>
+        </div>
+
+        <div class="action-layout">
+          <div class="help-card urgent-card reveal">
+            <p class="urgent-label">Immediate risk</p>
+            <h3>If there is imminent danger, start with 112.</h3>
+            <p>
+              The India Emergency Response Support System connects police, fire, ambulance, and emergency assistance pathways.
+            </p>
+            <a class="primary-button" href="tel:112">Call 112</a>
+          </div>
+
+          <div id="support-grid" class="support-grid"></div>
+        </div>
+
+        <div class="resource-panel reveal">
+          <div class="resource-panel__header">
+            <div>
+              <p class="eyebrow">Official resources</p>
+              <h3>Reference sites and reporting channels</h3>
+            </div>
+            <p class="resource-panel__note">Last cross-checked against official sources in March 2026.</p>
+          </div>
+          <div id="resource-grid" class="resource-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="programs" class="section section--alt">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Programs</p>
+          <h2>Deployment-ready formats</h2>
+          <p>
+            These are reusable program shells, designed to stay useful without hard-coded stale event dates.
+          </p>
+        </div>
+
+        <div id="program-grid" class="program-grid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Product standards</p>
+          <h2>What changed in the upgrade</h2>
+          <p>The project has been reshaped around maintainability, credibility, and production-readiness.</p>
+        </div>
+
+        <div id="standards-grid" class="standards-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <aside id="support-drawer" class="support-drawer" hidden>
+    <div class="support-drawer__header">
+      <div>
+        <p class="eyebrow">Support drawer</p>
+        <h2>Quick access numbers</h2>
+      </div>
+      <button class="ghost-button" type="button" data-action="toggle-support">Close</button>
+    </div>
+    <div id="support-drawer-grid" class="support-drawer__grid"></div>
+  </aside>
+
+  <dialog id="track-dialog" class="track-dialog">
+    <div class="track-dialog__shell">
+      <form method="dialog" class="track-dialog__close-row">
+        <button class="ghost-button" type="submit">Close</button>
+      </form>
+      <div id="track-dialog-content"></div>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/brand/safeed-logo.svg" alt="SafeEd" width="192" height="48">
+        <p class="footer-copy">
+          SafeEd is a static, privacy-first frontend prototype prepared for production hardening, content operations, and future backend integration.
+        </p>
+      </div>
+      <div>
+        <p class="footer-heading">Verified sources</p>
+        <ul class="footer-links">
+          <li><a href="https://112.gov.in/" target="_blank" rel="noreferrer">Emergency Response Support System</a></li>
+          <li><a href="https://missionshakti.wcd.gov.in/contact" target="_blank" rel="noreferrer">Mission Shakti contact and helplines</a></li>
+          <li><a href="https://www.ncw.gov.in/" target="_blank" rel="noreferrer">National Commission for Women</a></li>
+          <li><a href="https://telemanas.mohfw.gov.in/" target="_blank" rel="noreferrer">Tele-MANAS</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Notes</p>
+        <ul class="footer-links">
+          <li>Local storage is used for theme, planner preferences, progress, and saved resources.</li>
+          <li>The interface is English-first until reviewed multilingual content is available.</li>
+          <li>The original one-file prototype has been superseded by a maintainable multi-file structure.</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
