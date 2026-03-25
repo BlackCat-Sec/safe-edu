@@ -1,49 +1,49 @@
-# Project audit
+﻿# Project audit
 
-## What the original project was
+## Original state
 
-The original project was a monolithic single-page HTML prototype for a platform called SafeEd. Its intent was clear and valuable: combine safety education, emergency support awareness, and empowerment-oriented content in a single frontend experience.
+The original repository was a single-file frontend prototype. Its intent was useful, but the implementation relied on demo-only state and could not behave like a real application.
 
-The core agenda was already visible:
+Main gaps in the original build:
 
-1. Teach safety concepts such as harassment prevention, consent, digital safety, and mental wellbeing.
-2. Offer fast access to helplines and public-support routes.
-3. Give users lightweight learning interactions such as notes, progress, and course cards.
+1. No backend or database.
+2. Simulated authentication.
+3. No persistent learning progress.
+4. No real report submission path.
+5. Hardcoded content mixed directly into one HTML file.
+6. No admin operations or content-management workflow.
+7. No backend tests or runtime dependency file.
 
-## Main issues found in the original implementation
+## What the project is now
 
-1. Everything lived in one large HTML file, which made the project hard to maintain, audit, or extend.
-2. The login flow was simulated and created a false sense of account behavior.
-3. Learning progress existed only in memory and disappeared on refresh.
-4. The UX depended on placeholder delays and demo-style state changes.
-5. Some event dates were locked to 2025, which was stale by March 2026.
-6. The project relied on several external libraries for effects that did not justify the complexity.
-7. High-risk support content deserved clearer sourcing and fresher verification.
-8. The translation layer was broad but operationally fragile for production-quality safety content.
+SafeEd is now a local full-stack application with a browser client, FastAPI backend, SQLite persistence, seeded educational content, support-request storage, and an admin console.
 
-## Rebuild decisions
+Implemented upgrades:
 
-The upgrade intentionally changed direction in a few places:
+1. FastAPI application entry in [app/main.py](C:/VsCode/safe edu/app/main.py).
+2. SQLAlchemy models in [app/models.py](C:/VsCode/safe edu/app/models.py).
+3. SQLite session and database wiring in [app/database.py](C:/VsCode/safe edu/app/database.py).
+4. Password hashing and cookie-session helpers in [app/security.py](C:/VsCode/safe edu/app/security.py).
+5. Real seed content and verified support references in [app/seed_data.py](C:/VsCode/safe edu/app/seed_data.py).
+6. API-backed frontend logic in [assets/js/app.js](C:/VsCode/safe edu/assets/js/app.js).
+7. Admin CRUD workflows for tracks, resources, programs, and support contacts.
+8. Stored support requests with admin status updates.
+9. Backend tests in [tests/test_app.py](C:/VsCode/safe edu/tests/test_app.py).
+10. Runtime dependency manifest in [requirements.txt](C:/VsCode/safe edu/requirements.txt).
+11. Service-worker cache policy aligned to the new API architecture in [sw.js](C:/VsCode/safe edu/sw.js).
+12. Versioned content packs and reporting defaults in [app/content](C:/VsCode/safe edu/app/content).
+13. Admin audit log and import/export tooling in [app/main.py](C:/VsCode/safe edu/app/main.py).
+14. Expanded dashboard activity feed and next-step guidance in [assets/js/app.js](C:/VsCode/safe edu/assets/js/app.js).
+15. Localized UI labels and offline bootstrap fallback in [assets/js/app.js](C:/VsCode/safe edu/assets/js/app.js).
 
-1. Fake auth was removed in favor of a local learner planner.
-2. Time-sensitive bootcamp listings were replaced by reusable program formats.
-3. The site is now English-first until reviewed multilingual content is available.
-4. The new structure is optimized for static hosting, GitHub Pages deployment, and future backend integration.
+## Remaining production work
 
-## Current industry-readiness improvements
+This is now a working local application, but a public production rollout would still need:
 
-1. Branded asset system with SVG logo and favicon.
-2. Separated HTML, CSS, and JavaScript.
-3. Clear information architecture around agenda, uses, planner, tracks, action center, and programs.
-4. Local storage persistence for user preferences and progress.
-5. Service worker and manifest for installability and offline support.
-6. Responsive layout and accessible navigation/dialog patterns.
-7. Documented verified-source links for public-service references.
-8. Redirect from the old `test1.html` entry path to the new `index.html`.
-
-## Remaining work for a full production rollout
-
-1. Add a content review workflow with domain experts.
-2. Add unit and end-to-end testing once a JS toolchain is available.
-3. Introduce backend services only if the product genuinely needs accounts, dashboards, or content management.
-4. Set up a real deployment pipeline and repository governance documents after Git access is available.
+1. Deployment infrastructure and environment-specific configuration.
+2. Proper secret management and non-demo admin credentials.
+3. Stronger form moderation and data-retention policy for sensitive reports.
+4. Monitoring, logging, and backup strategy.
+5. Broader automated test coverage and linting.
+6. Optional migration from SQLite to PostgreSQL for multi-user hosted deployment.
+7. Human-reviewed multilingual content if the product expands beyond English-first delivery.

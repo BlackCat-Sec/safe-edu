@@ -1,3 +1,10 @@
-.DS_Store
+﻿.DS_Store
 Thumbs.db
 desktop.ini
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+*.pyc
+*.db
+*.sqlite3

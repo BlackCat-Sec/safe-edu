@@ -1,8 +1,8 @@
-{
+﻿{
   "name": "SafeEd",
   "short_name": "SafeEd",
-  "description": "Safety literacy for real-world communities.",
-  "start_url": "./index.html",
+  "description": "Database-backed safety education with learning tracks, support requests, and admin workflows.",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#f6f1e8",
   "theme_color": "#12303b",

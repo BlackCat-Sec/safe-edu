@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Emergency Response Support System",
+    "owner": "Government of India",
+    "category": "Emergency",
+    "description": "Official emergency response platform covering immediate public-safety pathways.",
+    "link": "https://112.gov.in/",
+    "verified_on": "March 10, 2026",
+    "tags": ["Emergency", "Official"],
+    "source_url": "https://112.gov.in/",
+    "license": "Public information"
+  },
+  {
+    "title": "Mission Shakti contact hub",
+    "owner": "Ministry of Women and Child Development",
+    "category": "Support",
+    "description": "Public contact references for women, children, legal aid, cybercrime, and support services.",
+    "link": "https://missionshakti.wcd.gov.in/contact",
+    "verified_on": "March 10, 2026",
+    "tags": ["Women", "Children", "Support"],
+    "source_url": "https://missionshakti.wcd.gov.in/contact",
+    "license": "Public information"
+  },
+  {
+    "title": "National Cyber Crime Reporting Portal",
+    "owner": "Government of India",
+    "category": "Digital safety",
+    "description": "Official reporting portal for cybercrime complaints and online abuse incidents.",
+    "link": "https://cybercrime.gov.in/",
+    "verified_on": "March 10, 2026",
+    "tags": ["Cyber", "Official"],
+    "source_url": "https://cybercrime.gov.in/",
+    "license": "Public information"
+  },
+  {
+    "title": "National Commission for Women",
+    "owner": "NCW",
+    "category": "Rights and reporting",
+    "description": "Reference point for complaint pathways, awareness material, and public resources related to women's rights.",
+    "link": "https://www.ncw.gov.in/",
+    "verified_on": "March 10, 2026",
+    "tags": ["NCW", "Rights"],
+    "source_url": "https://www.ncw.gov.in/",
+    "license": "Public information"
+  },
+  {
+    "title": "SHe-Box",
+    "owner": "Ministry of Women and Child Development",
+    "category": "Workplace support",
+    "description": "Electronic complaint entry point for workplace sexual harassment contexts.",
+    "link": "https://shebox.wcd.gov.in/",
+    "verified_on": "March 10, 2026",
+    "tags": ["Workplace", "Reporting"],
+    "source_url": "https://shebox.wcd.gov.in/",
+    "license": "Public information"
+  },
+  {
+    "title": "Tele-MANAS",
+    "owner": "Ministry of Health and Family Welfare",
+    "category": "Mental health",
+    "description": "Official national mental-health support entry point.",
+    "link": "https://telemanas.mohfw.gov.in/",
+    "verified_on": "March 10, 2026",
+    "tags": ["Mental health", "Official"],
+    "source_url": "https://telemanas.mohfw.gov.in/",
+    "license": "Public information"
+  }
+]

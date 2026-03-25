@@ -1,0 +1,274 @@
+{
+  "user": null,
+  "tracks": [
+    {
+      "id": 1,
+      "slug": "harassment-response-foundations",
+      "title": "Harassment response foundations",
+      "category": "prevention",
+      "duration": "90 minutes",
+      "audience": "Students, campuses, workplaces",
+      "deliveryFormat": "Guide plus scenarios",
+      "summary": "Learn how to spot harassment patterns, document incidents safely, and choose the right escalation path without increasing harm.",
+      "tags": ["Prevention", "Documentation", "Campus", "Workplace"],
+      "outcomes": [
+        "Identify verbal, digital, and power-based forms of harassment.",
+        "Separate facts, evidence, and assumptions while documenting incidents.",
+        "Choose between internal reporting, official channels, and urgent emergency support."
+      ],
+      "materials": ["Red-flag checklist", "Documentation worksheet", "Escalation decision guide"],
+      "lessons": [
+        {
+          "title": "Recognize unsafe behavior",
+          "type": "Brief",
+          "points": [
+            "Harassment can be repeated or one-off if the impact is serious enough.",
+            "Power differences matter: manager-employee, senior-junior, teacher-student, or group pressure.",
+            "Digital behavior counts when it intimidates, pressures, or humiliates someone."
+          ]
+        },
+        {
+          "title": "Document safely",
+          "type": "Checklist",
+          "points": [
+            "Record date, time, location, people present, exact words or actions, and immediate impact.",
+            "Save screenshots, messages, emails, and call logs without editing originals.",
+            "Do not pressure a harmed person to retell events repeatedly."
+          ]
+        },
+        {
+          "title": "Choose the next action",
+          "type": "Decision tree",
+          "points": [
+            "Use emergency services for immediate danger.",
+            "Use organizational channels when there is a clear reporting mechanism.",
+            "Use official public reporting channels when internal routes are unsafe or unavailable."
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "question": "What should be captured first in a basic incident record?",
+          "options": [
+            "Opinions about the person's character",
+            "Facts such as date, time, place, and what happened",
+            "A long social media thread"
+          ],
+          "answer": 1,
+          "explanation": "Start with facts, timing, location, and observed behavior."
+        },
+        {
+          "question": "If someone is in immediate danger, what comes first?",
+          "options": ["Wait for the next workshop", "Call 112 or urgent support", "Only save the issue for later"],
+          "answer": 1,
+          "explanation": "Emergency risk should be routed immediately to urgent response channels."
+        },
+        {
+          "question": "Why is evidence preservation important?",
+          "options": ["It reduces confusion and supports reporting", "It replaces all support conversations", "It guarantees a legal outcome"],
+          "answer": 0,
+          "explanation": "Evidence helps clarify events but does not replace support or guarantee outcomes."
+        }
+      ],
+      "prerequisites": [],
+      "pathway": "Foundations",
+      "pathOrder": 1,
+      "badge": "Foundation badge",
+      "passingScore": 70,
+      "completionCriteria": ["Complete the lessons", "Score 70% or higher on the quiz"],
+      "sourceUrl": "",
+      "license": "SafeEd Original (CC BY 4.0)",
+      "status": "published",
+      "published": true,
+      "progress": { "completed": false, "quizScore": null, "lastActivity": null }
+    }
+  ],
+  "resources": [
+    {
+      "id": 1,
+      "title": "Emergency Response Support System",
+      "owner": "Government of India",
+      "category": "Emergency",
+      "description": "Official emergency response platform covering immediate public-safety pathways.",
+      "link": "https://112.gov.in/",
+      "verifiedOn": "March 10, 2026",
+      "tags": ["Emergency", "Official"],
+      "saved": false,
+      "sourceUrl": "https://112.gov.in/",
+      "license": "Public information",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "title": "National Cyber Crime Reporting Portal",
+      "owner": "Government of India",
+      "category": "Digital safety",
+      "description": "Official reporting portal for cybercrime complaints and online abuse incidents.",
+      "link": "https://cybercrime.gov.in/",
+      "verifiedOn": "March 10, 2026",
+      "tags": ["Cyber", "Official"],
+      "saved": false,
+      "sourceUrl": "https://cybercrime.gov.in/",
+      "license": "Public information",
+      "status": "active"
+    }
+  ],
+  "programs": [
+    {
+      "id": 1,
+      "title": "Campus safety sprint",
+      "badge": "Quarterly cohort shell",
+      "summary": "A structured two-week program for orientation teams, anti-ragging cells, and student welfare units.",
+      "status": "Active",
+      "meta": ["2 weeks", "Hybrid", "Student-first"],
+      "sourceUrl": "",
+      "license": "SafeEd Original (CC BY 4.0)"
+    }
+  ],
+  "supportContacts": [
+    {
+      "id": 1,
+      "title": "Emergency Response Support System",
+      "number": "112",
+      "category": "Emergency",
+      "description": "Use for immediate emergency help involving police, fire, ambulance, or other urgent public-safety response.",
+      "link": "https://112.gov.in/",
+      "priority": 10,
+      "sourceUrl": "https://112.gov.in/",
+      "license": "Public information"
+    },
+    {
+      "id": 2,
+      "title": "Cybercrime and urgent digital fraud support",
+      "number": "1930",
+      "category": "Digital safety",
+      "description": "Use for urgent cyber fraud response and quick escalation of digital financial crime.",
+      "link": "https://cybercrime.gov.in/",
+      "priority": 40,
+      "sourceUrl": "https://cybercrime.gov.in/",
+      "license": "Public information"
+    }
+  ],
+  "dashboard": null,
+  "adminOverview": null,
+  "defaults": {
+    "roles": ["learner", "facilitator", "admin"],
+    "reportCategories": ["Harassment", "Digital safety", "Mental health", "Workplace safety", "General support"],
+    "reportUrgency": ["Standard", "Priority", "Urgent"],
+    "reportStatuses": ["New", "In review", "Resolved", "Closed"],
+    "reportFields": {
+      "Harassment": [
+        { "id": "location", "label": "Location or context", "type": "text", "required": false },
+        { "id": "date", "label": "Date of incident", "type": "date", "required": false },
+        { "id": "evidence", "label": "Evidence saved (yes or no)", "type": "text", "required": false }
+      ],
+      "Digital safety": [
+        { "id": "platform", "label": "Platform or app", "type": "text", "required": false },
+        { "id": "account", "label": "Account impacted", "type": "text", "required": false },
+        { "id": "loss", "label": "Financial loss (if any)", "type": "text", "required": false }
+      ],
+      "Mental health": [
+        { "id": "support_needed", "label": "Type of support needed", "type": "text", "required": false },
+        { "id": "risk_level", "label": "Immediate safety risk", "type": "text", "required": false }
+      ],
+      "Workplace safety": [
+        { "id": "department", "label": "Department or team", "type": "text", "required": false },
+        { "id": "reporting_route", "label": "Internal route used", "type": "text", "required": false }
+      ],
+      "General support": [
+        { "id": "context", "label": "Context or setting", "type": "text", "required": false }
+      ]
+    },
+    "reportNextSteps": {
+      "Harassment": {
+        "Standard": [
+          "Document facts, dates, and evidence in a safe place.",
+          "Use internal reporting or official channels if available.",
+          "Reach out to a trusted support contact for guidance."
+        ],
+        "Priority": [
+          "Prioritize safety and support for those impacted.",
+          "Escalate to official channels if internal routes are unsafe.",
+          "Preserve evidence without sharing it broadly."
+        ],
+        "Urgent": [
+          "If there is immediate danger, call 112 first.",
+          "Move to a safe location and reach out to emergency support.",
+          "Record only essential facts for follow-up."
+        ]
+      },
+      "Digital safety": {
+        "Standard": [
+          "Change passwords and enable two-factor authentication.",
+          "Preserve screenshots and transaction details.",
+          "Consider filing a report on the cybercrime portal."
+        ],
+        "Priority": [
+          "Call 1930 quickly if financial fraud is involved.",
+          "Secure accounts from a trusted device.",
+          "Record the timeline of events and evidence."
+        ],
+        "Urgent": [
+          "Call 1930 for urgent digital fraud response.",
+          "Freeze compromised accounts or payment instruments.",
+          "Reach out to official reporting channels immediately."
+        ]
+      },
+      "Mental health": {
+        "Standard": [
+          "Use calm, supportive language and check in regularly.",
+          "Offer to connect them with local or official support.",
+          "Avoid promising secrecy if urgent risk is present."
+        ],
+        "Priority": [
+          "If distress is high, suggest contacting Tele-MANAS.",
+          "Stay with the person or arrange trusted support.",
+          "Follow any local safeguarding policy."
+        ],
+        "Urgent": [
+          "If immediate safety risk exists, contact emergency services.",
+          "Reach out to Tele-MANAS or local crisis lines.",
+          "Do not delay urgent support."
+        ]
+      },
+      "Workplace safety": {
+        "Standard": [
+          "Use official reporting mechanisms where safe.",
+          "Document facts and identify a trusted internal contact.",
+          "Track status and next actions."
+        ],
+        "Priority": [
+          "Escalate to formal HR or compliance channels quickly.",
+          "Ensure the person impacted has support.",
+          "Preserve documentation."
+        ],
+        "Urgent": [
+          "Prioritize immediate safety and official response.",
+          "Contact emergency services if necessary.",
+          "Avoid informal-only handling for urgent risk."
+        ]
+      },
+      "General support": {
+        "Standard": [
+          "Identify the safest support route available.",
+          "Document key facts and preferences.",
+          "Follow up with a clear next step."
+        ],
+        "Priority": [
+          "Use trusted support channels for quicker response.",
+          "Document details to reduce repeat retelling.",
+          "Confirm next check-in time."
+        ],
+        "Urgent": [
+          "If immediate danger is present, call 112.",
+          "Use official emergency or specialist support routes.",
+          "Share only essential information for safety."
+        ]
+      }
+    },
+    "locales": { "default": "en-IN", "supported": ["en-IN", "hi-IN"] },
+    "contentVersion": "2026.03.10",
+    "defaultAdminEmail": null,
+    "defaultAdminPassword": null
+  }
+}

@@ -1,78 +1,129 @@
-# SafeEd
+﻿# SafeEd
 
-SafeEd is a static safety-education frontend designed for India-focused learning, support awareness, and community facilitation. The current version is a rebuilt product shell intended to replace the original one-file prototype with a cleaner, deployable, more credible structure.
+SafeEd is now a local full-stack safety education application built with `FastAPI`, `SQLite`, and a browser client that talks to real APIs. It supports account creation, persistent learning progress, quiz scoring, saved resources, support-request submission, admin-managed content, content import/export, and localized UI labels.
 
-## Agenda
+## What the application does
 
-SafeEd exists to do four things well:
+SafeEd is structured around four core workflows:
 
-1. Prevent harm earlier by teaching pattern recognition around harassment, coercion, unsafe digital behavior, and escalation risk.
-2. Improve response quality by giving users clearer ways to document, refer, and route issues safely.
-3. Support recovery with calmer language, mental-health-first-response framing, and referral awareness.
-4. Scale responsibly through maintainable code, accessible UI patterns, offline support, and higher-trust public-service references.
+1. Deliver practical safety-learning tracks with lessons, outcomes, and quizzes.
+2. Route users toward verified public support channels when they need help.
+3. Store real user activity such as progress, quiz scores, saved resources, and support requests.
+4. Give admins a local console to manage tracks, resources, program formats, support contacts, and report statuses.
 
-## Uses
+## Current features
 
-SafeEd is suitable for:
-
-1. School and college orientation programs.
-2. NGO-led workshops and facilitator toolkits.
-3. Workplace awareness initiatives and refresher programs.
-4. Parent, caregiver, and community resource sessions.
-5. Lightweight safety-resource hubs on static hosting platforms.
-
-## Upgrade summary
-
-The original project was a single `test1.html` file with bundled styles, scripts, demo-only login behavior, in-memory progress, stale dated content, and limited production structure. This upgrade replaces that with:
-
-1. `index.html` as the main entry point, with `test1.html` preserved as a redirect.
-2. A stronger brand layer with custom SafeEd SVG logo assets.
-3. Split CSS and JS files for maintainability.
-4. A local learner planner instead of a fake authentication modal.
-5. Track completion and saved resources persisted in local storage.
-6. Verified support-routing references pointed toward official or primary public-service sources.
-7. PWA basics through `site.webmanifest` and `sw.js`.
-8. Responsive, keyboard-friendly UI and reduced external dependency weight.
+- User registration and sign-in for `learner` and `facilitator` roles.
+- Seeded admin account for local management (hidden by default; see env flags).
+- SQLite-backed persistence for sessions, progress, saved resources, and reports.
+- Seeded learning tracks with lessons and graded quizzes.
+- Verified India-focused support contacts and public-service resources.
+- Admin CRUD workflows for tracks, resources, programs, and support contacts.
+- Admin status management for submitted support requests.
+- Admin audit log for content and report actions.
+- Admin import/export tooling for content backups.
+- AI-assisted draft track generator (optional endpoint).
+- Theme switcher, responsive layout, dialogs, and service-worker shell caching.
+- Health endpoint at `/api/health`.
 
 ## Project structure
 
 ```text
 .
-|-- index.html
-|-- test1.html
+|-- app/
+|   |-- database.py
+|   |-- content/
+|   |-- main.py
+|   |-- models.py
+|   |-- seed_data.py
+|   `-- security.py
 |-- assets/
 |   |-- brand/
 |   |-- css/
+|   |-- data/
 |   `-- js/
+|-- tests/
+|   `-- test_app.py
+|-- index.html
 |-- sw.js
 |-- site.webmanifest
+|-- requirements.txt
 |-- PROJECT_AUDIT.md
 `-- README.md
 ```
 
 ## Run locally
 
-You can open `index.html` directly in a browser. For service-worker behavior and a cleaner local environment, run a static server from the project root:
+Create a virtual environment, install the dependencies, and start the FastAPI server from the project root.
 
 ```powershell
-python -m http.server 8000
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+uvicorn app.main:app --reload
 ```
 
-Then open `http://localhost:8000`.
+Then open [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-## Verified public-service references
+Do not run this build with `python -m http.server` if you want the application features to work. The browser client expects `/api/*` endpoints, cookies, and database-backed state.
 
-These were cross-checked on March 10, 2026:
+If PowerShell blocks `Activate.ps1`, use one of these options:
 
-1. [Emergency Response Support System](https://112.gov.in/)
-2. [Mission Shakti contact and helplines](https://missionshakti.wcd.gov.in/contact)
-3. [National Cyber Crime Reporting Portal](https://cybercrime.gov.in/)
-4. [National Commission for Women](https://www.ncw.gov.in/)
-5. [SHe-Box](https://shebox.wcd.gov.in/)
-6. [Tele-MANAS](https://telemanas.mohfw.gov.in/)
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+```powershell
+.\.venv\Scripts\python -m pip install -r requirements.txt
+.\.venv\Scripts\python -m uvicorn app.main:app --reload
+```
+
+## Default admin account
+
+Use this only for local development. To expose the seeded admin credentials in the UI, set `SAFEED_EXPOSE_ADMIN_DEMO=true`.
+
+- Email: `admin@safeed.local`
+- Password: `SafeEdAdmin123!`
+
+## Test suite
+
+Run the backend tests with:
+
+```powershell
+pytest
+```
+
+The tests cover:
+
+- bootstrap and seeded content availability
+- registration and authenticated progress flows
+- quiz submission and dashboard updates
+- admin review and resource creation flows
+
+## Seeded content
+
+The application ships with authored seed content in [app/content](C:/VsCode/safeedu/app/content), including:
+
+- harassment response foundations
+- consent and boundaries
+- digital safety and scam defense
+- mental-health first response
+- reporting and referrals
+- bystander leadership
+
+It also includes official support references such as `112`, Mission Shakti, the National Cyber Crime Reporting Portal, the National Commission for Women, `SHe-Box`, and `Tele-MANAS`.
 
 ## Notes
 
-1. The current build is English-first because partially translated safety content is a credibility risk if it has not been reviewed by a human editor or subject expert.
-2. This is still a frontend-only product shell. Production rollout should add content governance, analytics, backend auth if needed, and an editorial review workflow.
-3. No license file was added because ownership and open-source intent should be set explicitly by the project owner.
+- The current database is a local SQLite file: `safeed.db`.
+- If you update schema or seed data, delete `safeed.db` to force a clean rebuild.
+- Email addresses are validated in the application layer without requiring optional Pydantic email extras.
+- API responses are marked `Cache-Control: no-store`, and the service worker intentionally avoids caching `/api/*` routes.
+- The old `test1.html` entry path is preserved as a redirect to the main app.
+
+## Environment flags
+
+- `SAFEED_DATABASE_URL`: override the SQLite database location.
+- `SAFEED_EXPOSE_ADMIN_DEMO=true`: show the seeded admin credentials in the UI.
+- `SAFEED_LLM_ENDPOINT`: optional HTTP endpoint for AI draft tracks.
+- `SAFEED_LLM_MODEL`: optional model name to send to the draft endpoint.

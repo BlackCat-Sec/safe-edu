@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Emergency Response Support System",
+    "number": "112",
+    "category": "Emergency",
+    "description": "Use for immediate emergency help involving police, fire, ambulance, or other urgent public-safety response.",
+    "link": "https://112.gov.in/",
+    "priority": 10,
+    "source_url": "https://112.gov.in/",
+    "license": "Public information"
+  },
+  {
+    "title": "Women Helpline",
+    "number": "181",
+    "category": "Support",
+    "description": "A widely referenced support route for women in distress through public support channels.",
+    "link": "https://missionshakti.wcd.gov.in/contact",
+    "priority": 20,
+    "source_url": "https://missionshakti.wcd.gov.in/contact",
+    "license": "Public information"
+  },
+  {
+    "title": "CHILDLINE",
+    "number": "1098",
+    "category": "Child safety",
+    "description": "Emergency support pathway for children and minors who need protection or urgent help.",
+    "link": "https://missionshakti.wcd.gov.in/contact",
+    "priority": 30,
+    "source_url": "https://missionshakti.wcd.gov.in/contact",
+    "license": "Public information"
+  },
+  {
+    "title": "Cybercrime and urgent digital fraud support",
+    "number": "1930",
+    "category": "Digital safety",
+    "description": "Use for urgent cyber fraud response and quick escalation of digital financial crime.",
+    "link": "https://cybercrime.gov.in/",
+    "priority": 40,
+    "source_url": "https://cybercrime.gov.in/",
+    "license": "Public information"
+  },
+  {
+    "title": "Tele-MANAS",
+    "number": "14416",
+    "category": "Mental health",
+    "description": "Mental-health support pathway under the Ministry of Health and Family Welfare.",
+    "link": "https://telemanas.mohfw.gov.in/",
+    "priority": 50,
+    "source_url": "https://telemanas.mohfw.gov.in/",
+    "license": "Public information"
+  },
+  {
+    "title": "Legal aid support",
+    "number": "15100",
+    "category": "Legal support",
+    "description": "Legal support number referenced in public support directories and contact hubs.",
+    "link": "https://missionshakti.wcd.gov.in/contact",
+    "priority": 60,
+    "source_url": "https://missionshakti.wcd.gov.in/contact",
+    "license": "Public information"
+  }
+]

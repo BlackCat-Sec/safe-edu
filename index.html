@@ -6,13 +6,13 @@
   <title>SafeEd | Safety literacy for real-world communities</title>
   <meta
     name="description"
-    content="SafeEd is a practical safety education platform for schools, colleges, NGOs, and workplaces across India."
+    content="SafeEd is a full-stack safety education application with verified support pathways, persistent progress, and admin-managed content."
   >
   <meta name="theme-color" content="#12303b">
   <meta property="og:title" content="SafeEd">
   <meta
     property="og:description"
-    content="Practical learning tracks, verified emergency pathways, and community-ready safety education."
+    content="Real user accounts, persistent learning progress, support requests, and admin-managed safety education."
   >
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
@@ -30,15 +30,15 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
   <noscript>
     <div class="noscript-banner">
-      SafeEd works best with JavaScript enabled because learning plans, saved progress, and the support drawer are interactive.
+      SafeEd requires JavaScript for authentication, learning progress, quizzes, and admin workflows.
     </div>
   </noscript>
 
   <header class="site-header">
     <div class="announcement-bar">
       <div class="container announcement-inner">
-        <p>Verified India-focused support pathways, local privacy, and offline-ready access.</p>
-        <a href="#action-center">Open the action center</a>
+        <p>Full-stack SafeEd build: accounts, quizzes, support requests, persistent progress, and admin content control.</p>
+        <a href="#report-help">Open support request form</a>
       </div>
     </div>
 
@@ -58,21 +58,29 @@
       </button>
 
       <nav id="site-navigation" class="site-navigation" aria-label="Primary">
-        <a href="#agenda">Agenda</a>
-        <a href="#use-cases">Uses</a>
-        <a href="#planner">Planner</a>
-        <a href="#tracks">Tracks</a>
-        <a href="#action-center">Action Center</a>
-        <a href="#programs">Programs</a>
+        <a href="#agenda" data-i18n="nav.agenda">Agenda</a>
+        <a href="#dashboard" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="#tracks" data-i18n="nav.tracks">Tracks</a>
+        <a href="#resources" data-i18n="nav.resources">Resources</a>
+        <a href="#report-help" data-i18n="nav.support">Support</a>
+        <a href="#admin-console" data-i18n="nav.admin">Admin</a>
       </nav>
 
       <div class="nav-actions">
         <button class="ghost-button" type="button" data-action="toggle-theme" id="theme-toggle">
           Switch theme
         </button>
-        <button class="primary-button" type="button" data-action="toggle-support">
+        <div class="locale-switcher">
+          <label class="sr-only" for="locale-select">Language</label>
+          <select id="locale-select" class="locale-select">
+            <option value="en-IN">English</option>
+            <option value="hi-IN">Hindi</option>
+          </select>
+        </div>
+        <button class="secondary-button" type="button" data-action="toggle-support">
           Need help now?
         </button>
+        <div id="session-controls" class="session-controls"></div>
       </div>
     </div>
   </header>
@@ -81,51 +89,33 @@
     <section id="hero" class="hero-section section">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Safety literacy for real-world communities</p>
-          <h1>SafeEd turns sensitive topics into clear action systems.</h1>
-          <p class="hero-lead">
-            This rebuild positions SafeEd as a deployable civic-edtech product: practical learning tracks, verified crisis pathways,
-            local-first learner planning, and a cleaner structure for future scale.
+          <p class="eyebrow" data-i18n="hero.eyebrow">Safety literacy for real-world communities</p>
+          <h1 data-i18n="hero.title">SafeEd is now a real application, not just a prototype.</h1>
+          <p class="hero-lead" data-i18n="hero.lead">
+            Create accounts, complete learning tracks, submit quizzes, save official resources,
+            request support, and manage content through an admin workflow.
           </p>
           <div class="hero-actions">
-            <a class="primary-button" href="#tracks">Explore learning tracks</a>
-            <button class="secondary-button" type="button" data-action="toggle-support">
-              Open support drawer
+            <button class="primary-button" type="button" data-action="open-auth" data-auth-mode="register">
+              Create learner account
             </button>
+            <a class="secondary-button" href="#tracks">Browse learning tracks</a>
           </div>
           <ul class="trust-list" aria-label="Trust markers">
-            <li>Trauma-aware content framing</li>
-            <li>Progress stored on-device only</li>
-            <li>Official India helplines referenced</li>
+            <li>Official India support links</li>
+            <li>Persistent SQLite-backed data</li>
+            <li>Admin-managed content</li>
           </ul>
         </div>
 
         <aside class="hero-panel reveal" aria-label="Project snapshot">
-          <div class="metric-grid">
-            <article class="metric-card">
-              <strong>6</strong>
-              <span>practical learning tracks</span>
-            </article>
-            <article class="metric-card">
-              <strong>6</strong>
-              <span>verified support pathways</span>
-            </article>
-            <article class="metric-card">
-              <strong>3</strong>
-              <span>deployment-ready program formats</span>
-            </article>
-            <article class="metric-card">
-              <strong>PWA</strong>
-              <span>installable and offline-friendly</span>
-            </article>
-          </div>
-
+          <div class="metric-grid" id="metric-grid"></div>
           <div class="focus-panel">
-            <p class="focus-label">Current agenda</p>
-            <h2>Prevention, response, and confidence-building in one product flow.</h2>
+            <p class="focus-label">Live application scope</p>
+            <h2>Learning, reporting, support routing, and admin operations in one flow.</h2>
             <p>
-              SafeEd is best suited for campus orientation, NGO facilitation, workplace awareness campaigns,
-              parent sessions, and community referral support.
+              This build is designed for campuses, NGOs, workplaces, community groups,
+              and facilitators who need a deployable safety-learning system.
             </p>
           </div>
         </aside>
@@ -136,134 +126,51 @@
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">Agenda</p>
-          <h2>What this project is meant to do</h2>
+          <h2 data-i18n="agenda.title">What SafeEd is doing now</h2>
           <p>
-            SafeEd is not a generic content site. Its agenda is to make safety education actionable, context-aware,
-            and easier to operationalize across schools, colleges, NGOs, communities, and workplaces.
+            The application combines practical safety learning, real account state, support-request handling,
+            and admin-managed content so the experience can continue beyond a single browser session.
           </p>
         </div>
-
         <div class="agenda-grid">
           <article class="agenda-card reveal">
-            <h3>Prevent earlier</h3>
-            <p>Build pattern recognition around harassment, coercion, digital threats, and unsafe escalation.</p>
+            <h3>Teach practical response</h3>
+            <p>Seeded tracks include lessons, checklists, and quizzes that can be completed and tracked over time.</p>
           </article>
           <article class="agenda-card reveal">
-            <h3>Respond better</h3>
-            <p>Help learners document incidents, locate official channels, and choose safe next steps under pressure.</p>
+            <h3>Route support clearly</h3>
+            <p>Users can reach verified support numbers quickly and submit support requests from the same app.</p>
           </article>
           <article class="agenda-card reveal">
-            <h3>Support recovery</h3>
-            <p>Include emotional first-response principles, referral pathways, and non-judgmental language.</p>
+            <h3>Keep useful records</h3>
+            <p>Progress, quiz scores, saved resources, and submitted requests now persist in the database.</p>
           </article>
           <article class="agenda-card reveal">
-            <h3>Scale responsibly</h3>
-            <p>Keep the frontend maintainable, accessible, offline-capable, and ready for content ops or backend integration.</p>
+            <h3>Operate like a product</h3>
+            <p>Admins can create and manage tracks, resources, programs, support contacts, and report statuses.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="use-cases" class="section section--alt">
+    <section id="dashboard" class="section section--alt">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">Uses</p>
-          <h2>Where SafeEd fits in practice</h2>
-          <p>The product is now framed as a reusable program layer rather than a single demo page.</p>
+          <p class="eyebrow">User dashboard</p>
+          <h2 data-i18n="dashboard.title">Your learning and support activity</h2>
+          <p>The dashboard becomes active after sign-in and shows actual stored account data.</p>
         </div>
-
-        <div class="use-case-grid">
-          <article class="use-card reveal">
-            <span class="use-card__tag">Schools and colleges</span>
-            <h3>Orientation and awareness weeks</h3>
-            <p>Run structured tracks during onboarding, anti-ragging campaigns, digital citizenship weeks, and counseling initiatives.</p>
-          </article>
-          <article class="use-card reveal">
-            <span class="use-card__tag">NGOs and facilitators</span>
-            <h3>Field-ready workshop support</h3>
-            <p>Use the action center, learning briefs, and local planner as a lightweight facilitation toolkit.</p>
-          </article>
-          <article class="use-card reveal">
-            <span class="use-card__tag">Workplaces</span>
-            <h3>Awareness and upskilling</h3>
-            <p>Support prevention, reporting confidence, and refresher learning in HR, POSH, and people-ops programs.</p>
-          </article>
-          <article class="use-card reveal">
-            <span class="use-card__tag">Families and communities</span>
-            <h3>Trusted safety reference point</h3>
-            <p>Provide a calm, credible place to start when someone needs help, referral links, or a safer language framework.</p>
-          </article>
-        </div>
+        <div id="dashboard-shell" class="dashboard-shell"></div>
       </div>
     </section>
 
-    <section id="planner" class="section">
-      <div class="container planner-layout">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Planner</p>
-          <h2>Build a local learning plan</h2>
-          <p>
-            The previous fake login has been replaced with a local learner planner. Profile data never leaves the browser.
-          </p>
-        </div>
-
-        <div class="planner-card reveal">
-          <form id="planner-form" class="planner-form">
-            <label>
-              <span>Name</span>
-              <input id="planner-name" name="name" type="text" maxlength="40" placeholder="A learner or facilitator">
-            </label>
-            <label>
-              <span>Primary role</span>
-              <select id="planner-role" name="role">
-                <option value="student">Student</option>
-                <option value="educator">Educator</option>
-                <option value="parent">Parent or caregiver</option>
-                <option value="ngo">NGO facilitator</option>
-                <option value="workplace">Workplace ally</option>
-              </select>
-            </label>
-            <label>
-              <span>Main goal</span>
-              <select id="planner-goal" name="goal">
-                <option value="prevention">Prevention</option>
-                <option value="response">Reporting and response</option>
-                <option value="digital">Digital safety</option>
-                <option value="wellbeing">Wellbeing support</option>
-                <option value="leadership">Facilitation and leadership</option>
-              </select>
-            </label>
-            <label>
-              <span>Time available each week</span>
-              <select id="planner-minutes" name="minutes">
-                <option value="30">30 minutes</option>
-                <option value="45">45 minutes</option>
-                <option value="60">60 minutes</option>
-                <option value="90">90 minutes</option>
-              </select>
-            </label>
-            <button class="primary-button" type="submit">Save learning plan</button>
-          </form>
-        </div>
-
-        <aside class="planner-output reveal" aria-live="polite">
-          <div class="planner-output__header">
-            <p class="eyebrow">Recommended path</p>
-            <h3 id="planner-title">Three tracks to start with</h3>
-          </div>
-          <div id="planner-recommendations" class="planner-recommendations"></div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="tracks" class="section section--alt">
+    <section id="tracks" class="section">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">Learning studio</p>
-          <h2>Structured tracks with practical outcomes</h2>
-          <p>Search, filter, open the brief, and track completion locally.</p>
+          <p class="eyebrow">Tracks</p>
+          <h2 data-i18n="tracks.title">Real content with lessons and quizzes</h2>
+          <p>Tracks are now delivered from the backend and include persistent progress and quiz scoring.</p>
         </div>
-
         <div class="track-toolbar reveal">
           <label class="search-field">
             <span class="sr-only">Search tracks</span>
@@ -271,77 +178,144 @@
           </label>
           <div id="track-filters" class="filter-group" aria-label="Track filters"></div>
         </div>
-
-        <div class="summary-strip reveal" id="summary-strip" aria-live="polite"></div>
+        <div id="summary-strip" class="summary-strip reveal"></div>
         <div id="track-grid" class="track-grid"></div>
       </div>
     </section>
 
-    <section id="action-center" class="section">
+    <section id="resources" class="section section--alt">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">Action center</p>
-          <h2>When someone needs support now</h2>
-          <p>
-            This section prioritizes official and widely used India-focused support routes. SafeEd is educational and should not replace
-            emergency, legal, or clinical advice.
-          </p>
+          <p class="eyebrow">Resources</p>
+          <h2 data-i18n="resources.title">Verified support pathways and reusable programs</h2>
+          <p>All resource and program cards are now loaded from the backend and can be managed by admins.</p>
+        </div>
+        <div class="track-toolbar reveal">
+          <label class="search-field">
+            <span class="sr-only">Search resources and support</span>
+            <input id="global-search" type="search" placeholder="Search resources, programs, or support">
+          </label>
         </div>
 
         <div class="action-layout">
           <div class="help-card urgent-card reveal">
             <p class="urgent-label">Immediate risk</p>
             <h3>If there is imminent danger, start with 112.</h3>
-            <p>
-              The India Emergency Response Support System connects police, fire, ambulance, and emergency assistance pathways.
-            </p>
-            <a class="primary-button" href="tel:112">Call 112</a>
+            <p>Use the support drawer for quick access, then review the official directory for the right follow-up pathway.</p>
+            <button class="primary-button" type="button" data-action="toggle-support">Open support drawer</button>
           </div>
 
-          <div id="support-grid" class="support-grid"></div>
-        </div>
-
-        <div class="resource-panel reveal">
-          <div class="resource-panel__header">
-            <div>
-              <p class="eyebrow">Official resources</p>
-              <h3>Reference sites and reporting channels</h3>
+          <div class="resource-panel reveal">
+            <div class="resource-panel__header">
+              <div>
+                <p class="eyebrow">Official directory</p>
+                <h3>Support contacts and reference links</h3>
+              </div>
+              <p class="resource-panel__note">Official references are seeded from verified public-service sources.</p>
             </div>
-            <p class="resource-panel__note">Last cross-checked against official sources in March 2026.</p>
+            <div id="support-grid" class="support-grid"></div>
+            <div id="resource-grid" class="resource-grid"></div>
           </div>
-          <div id="resource-grid" class="resource-grid"></div>
         </div>
-      </div>
-    </section>
 
-    <section id="programs" class="section section--alt">
-      <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading section-heading--tight reveal">
           <p class="eyebrow">Programs</p>
-          <h2>Deployment-ready formats</h2>
-          <p>
-            These are reusable program shells, designed to stay useful without hard-coded stale event dates.
-          </p>
+          <h2>Deployment-ready program formats</h2>
         </div>
-
         <div id="program-grid" class="program-grid"></div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
+    <section id="report-help" class="section">
+      <div class="container report-layout">
         <div class="section-heading reveal">
-          <p class="eyebrow">Product standards</p>
-          <h2>What changed in the upgrade</h2>
-          <p>The project has been reshaped around maintainability, credibility, and production-readiness.</p>
+          <p class="eyebrow">Support request</p>
+          <h2 data-i18n="report.title">Submit a support request or guided follow-up</h2>
+          <p>
+            This form now saves data into the application database. It is not an emergency substitute;
+            urgent safety situations should still use the official channels first.
+          </p>
         </div>
 
-        <div id="standards-grid" class="standards-grid"></div>
+        <div class="planner-card reveal">
+          <form id="report-form" class="planner-form">
+            <label>
+              <span>Your name</span>
+              <input id="reporter-name" name="reporterName" type="text" maxlength="120" required>
+            </label>
+            <label>
+              <span>Your email</span>
+              <input id="reporter-email" name="reporterEmail" type="email" maxlength="255" required>
+            </label>
+            <label>
+              <span>Phone (optional)</span>
+              <input id="reporter-phone" name="reporterPhone" type="tel" maxlength="40">
+            </label>
+            <label>
+              <span>Category</span>
+              <select id="report-category" name="category"></select>
+            </label>
+            <label>
+              <span>Urgency</span>
+              <select id="report-urgency" name="urgency"></select>
+            </label>
+            <div id="report-extra-fields" class="report-extra-fields"></div>
+            <label>
+              <span>Preferred contact</span>
+              <select id="report-contact" name="preferredContact">
+                <option value="Email">Email</option>
+                <option value="Phone">Phone</option>
+                <option value="No preference">No preference</option>
+              </select>
+            </label>
+            <label>
+              <span>What happened or what support do you need?</span>
+              <textarea id="report-description" name="description" rows="6" minlength="20" maxlength="3000" required></textarea>
+            </label>
+            <button class="primary-button" type="submit">Submit support request</button>
+          </form>
+        </div>
+
+        <aside class="planner-output reveal">
+          <div class="planner-output__header">
+            <p class="eyebrow">How this works</p>
+            <h3>What gets stored</h3>
+          </div>
+          <div class="planner-recommendations">
+            <article class="recommendation-card">
+              <strong>Support request record</strong>
+              <p>Each submission is stored with category, urgency, preferred contact, and current status.</p>
+            </article>
+            <article class="recommendation-card">
+              <strong>Admin follow-up view</strong>
+              <p>Admin users can review recent requests and update statuses in the admin console.</p>
+            </article>
+            <article class="recommendation-card">
+              <strong>Safer routing</strong>
+              <p>The app keeps official support contacts visible so users can choose direct urgent channels when needed.</p>
+            </article>
+          </div>
+          <div class="planner-next-steps">
+            <h4>Suggested next steps</h4>
+            <ul id="report-next-steps" class="bullet-list"></ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="admin-console" class="section section--alt">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Admin console</p>
+          <h2 data-i18n="admin.title">Content and workflow management</h2>
+          <p>Only admin accounts can use these forms. The default seeded admin credentials are shown in the sign-in panel.</p>
+        </div>
+        <div id="admin-shell" class="admin-shell"></div>
       </div>
     </section>
   </main>
 
-  <aside id="support-drawer" class="support-drawer" hidden>
+  <aside id="support-drawer" class="support-drawer" hidden role="dialog" aria-modal="true" aria-label="Support drawer">
     <div class="support-drawer__header">
       <div>
         <p class="eyebrow">Support drawer</p>
@@ -352,12 +326,76 @@
     <div id="support-drawer-grid" class="support-drawer__grid"></div>
   </aside>
 
-  <dialog id="track-dialog" class="track-dialog">
+  <dialog id="track-dialog" class="track-dialog" aria-labelledby="track-dialog-title" aria-modal="true">
     <div class="track-dialog__shell">
       <form method="dialog" class="track-dialog__close-row">
         <button class="ghost-button" type="submit">Close</button>
       </form>
       <div id="track-dialog-content"></div>
+    </div>
+  </dialog>
+
+  <dialog id="auth-dialog" class="track-dialog" aria-labelledby="auth-title" aria-modal="true">
+    <div class="track-dialog__shell">
+      <form method="dialog" class="track-dialog__close-row">
+        <button class="ghost-button" type="submit">Close</button>
+      </form>
+      <div class="auth-panel">
+        <div class="section-heading section-heading--tight">
+          <p class="eyebrow">Account access</p>
+          <h2 id="auth-title">Create account</h2>
+          <p id="auth-copy">Create a learner or facilitator account to track progress and submit quizzes.</p>
+        </div>
+
+        <div class="auth-toggle-row">
+          <button class="ghost-button" type="button" data-action="switch-auth-mode" data-auth-mode="register">Register</button>
+          <button class="ghost-button" type="button" data-action="switch-auth-mode" data-auth-mode="login">Sign in</button>
+        </div>
+
+        <form id="register-form" class="planner-form">
+          <label>
+            <span>Name</span>
+            <input name="name" type="text" maxlength="120" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" maxlength="255" required>
+          </label>
+          <label>
+            <span>Password</span>
+            <input name="password" type="password" minlength="8" maxlength="120" required>
+          </label>
+          <label>
+            <span>Role</span>
+            <select name="role">
+              <option value="learner">Learner</option>
+              <option value="facilitator">Facilitator</option>
+            </select>
+          </label>
+          <label>
+            <span>Organization</span>
+            <input name="organization" type="text" maxlength="255">
+          </label>
+          <button class="primary-button" type="submit">Create account</button>
+        </form>
+
+        <form id="login-form" class="planner-form" hidden>
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" maxlength="255" required>
+          </label>
+          <label>
+            <span>Password</span>
+            <input name="password" type="password" minlength="8" maxlength="120" required>
+          </label>
+          <button class="primary-button" type="submit">Sign in</button>
+        </form>
+
+        <div class="auth-note">
+          <strong>Seeded admin account</strong>
+          <p id="seeded-admin-note">Available after bootstrap loads.</p>
+        </div>
+      </div>
     </div>
   </dialog>
 
@@ -368,24 +406,25 @@
       <div>
         <img src="assets/brand/safeed-logo.svg" alt="SafeEd" width="192" height="48">
         <p class="footer-copy">
-          SafeEd is a static, privacy-first frontend prototype prepared for production hardening, content operations, and future backend integration.
+          SafeEd now runs as a local FastAPI plus SQLite application with account state, content APIs, and admin workflows.
         </p>
+        <p class="footer-meta">Content version: <span id="content-version">-</span></p>
       </div>
       <div>
-        <p class="footer-heading">Verified sources</p>
+        <p class="footer-heading">Core workflows</p>
         <ul class="footer-links">
-          <li><a href="https://112.gov.in/" target="_blank" rel="noreferrer">Emergency Response Support System</a></li>
-          <li><a href="https://missionshakti.wcd.gov.in/contact" target="_blank" rel="noreferrer">Mission Shakti contact and helplines</a></li>
-          <li><a href="https://www.ncw.gov.in/" target="_blank" rel="noreferrer">National Commission for Women</a></li>
-          <li><a href="https://telemanas.mohfw.gov.in/" target="_blank" rel="noreferrer">Tele-MANAS</a></li>
+          <li>Create an account and sign in</li>
+          <li>Open tracks, complete quizzes, and save resources</li>
+          <li>Submit support requests and review them in admin mode</li>
         </ul>
       </div>
       <div>
-        <p class="footer-heading">Notes</p>
+        <p class="footer-heading">Official links</p>
         <ul class="footer-links">
-          <li>Local storage is used for theme, planner preferences, progress, and saved resources.</li>
-          <li>The interface is English-first until reviewed multilingual content is available.</li>
-          <li>The original one-file prototype has been superseded by a maintainable multi-file structure.</li>
+          <li><a href="https://112.gov.in/" target="_blank" rel="noreferrer">Emergency Response Support System</a></li>
+          <li><a href="https://missionshakti.wcd.gov.in/contact" target="_blank" rel="noreferrer">Mission Shakti</a></li>
+          <li><a href="https://cybercrime.gov.in/" target="_blank" rel="noreferrer">Cyber Crime Portal</a></li>
+          <li><a href="https://telemanas.mohfw.gov.in/" target="_blank" rel="noreferrer">Tele-MANAS</a></li>
         </ul>
       </div>
     </div>

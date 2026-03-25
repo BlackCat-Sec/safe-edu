@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Campus safety sprint",
+    "badge": "Quarterly cohort shell",
+    "summary": "A structured two-week program for orientation teams, anti-ragging cells, and student welfare units.",
+    "status": "Active",
+    "meta": ["2 weeks", "Hybrid", "Student-first"],
+    "source_url": "",
+    "license": "SafeEd Original (CC BY 4.0)"
+  },
+  {
+    "title": "Digital trust clinic",
+    "badge": "Repeatable workshop",
+    "summary": "A short-format clinic for scam defense, privacy hygiene, and cyber-response confidence.",
+    "status": "Active",
+    "meta": ["Half day", "Workshop", "Family-ready"],
+    "source_url": "",
+    "license": "SafeEd Original (CC BY 4.0)"
+  },
+  {
+    "title": "Community facilitator lab",
+    "badge": "Training-of-trainers shell",
+    "summary": "A practical facilitator program for NGOs, counselors, and local champions who need repeatable delivery materials.",
+    "status": "Active",
+    "meta": ["3 sessions", "Facilitated", "Scale-ready"],
+    "source_url": "",
+    "license": "SafeEd Original (CC BY 4.0)"
+  }
+]

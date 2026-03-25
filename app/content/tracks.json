@@ -1,0 +1,450 @@
+[
+  {
+    "slug": "harassment-response-foundations",
+    "title": "Harassment response foundations",
+    "category": "prevention",
+    "duration": "90 minutes",
+    "audience": "Students, campuses, workplaces",
+    "delivery_format": "Guide plus scenarios",
+    "summary": "Learn how to spot harassment patterns, document incidents safely, and choose the right escalation path without increasing harm.",
+    "tags": ["Prevention", "Documentation", "Campus", "Workplace"],
+    "outcomes": [
+      "Identify verbal, digital, and power-based forms of harassment.",
+      "Separate facts, evidence, and assumptions while documenting incidents.",
+      "Choose between internal reporting, official channels, and urgent emergency support."
+    ],
+    "materials": ["Red-flag checklist", "Documentation worksheet", "Escalation decision guide"],
+    "lessons": [
+      {
+        "title": "Recognize unsafe behavior",
+        "type": "Brief",
+        "points": [
+          "Harassment can be repeated or one-off if the impact is serious enough.",
+          "Power differences matter: manager-employee, senior-junior, teacher-student, or group pressure.",
+          "Digital behavior counts when it intimidates, pressures, or humiliates someone."
+        ]
+      },
+      {
+        "title": "Document safely",
+        "type": "Checklist",
+        "points": [
+          "Record date, time, location, people present, exact words or actions, and immediate impact.",
+          "Save screenshots, messages, emails, and call logs without editing originals.",
+          "Do not pressure a harmed person to retell events repeatedly."
+        ]
+      },
+      {
+        "title": "Choose the next action",
+        "type": "Decision tree",
+        "points": [
+          "Use emergency services for immediate danger.",
+          "Use organizational channels when there is a clear reporting mechanism.",
+          "Use official public reporting channels when internal routes are unsafe or unavailable."
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "question": "What should be captured first in a basic incident record?",
+        "options": [
+          "Opinions about the person's character",
+          "Facts such as date, time, place, and what happened",
+          "A long social media thread"
+        ],
+        "answer": 1,
+        "explanation": "Start with facts, timing, location, and observed behavior."
+      },
+      {
+        "question": "If someone is in immediate danger, what comes first?",
+        "options": ["Wait for the next workshop", "Call 112 or urgent support", "Only save the issue for later"],
+        "answer": 1,
+        "explanation": "Emergency risk should be routed immediately to urgent response channels."
+      },
+      {
+        "question": "Why is evidence preservation important?",
+        "options": ["It reduces confusion and supports reporting", "It replaces all support conversations", "It guarantees a legal outcome"],
+        "answer": 0,
+        "explanation": "Evidence helps clarify events but does not replace support or guarantee outcomes."
+      }
+    ],
+    "prerequisites": [],
+    "pathway": "Foundations",
+    "path_order": 1,
+    "badge": "Foundation badge",
+    "passing_score": 70,
+    "completion_criteria": ["Complete the lessons", "Score 70% or higher on the quiz"],
+    "source_url": "",
+    "license": "SafeEd Original (CC BY 4.0)",
+    "status": "published"
+  },
+  {
+    "slug": "consent-and-boundaries",
+    "title": "Consent and healthy boundaries",
+    "category": "prevention",
+    "duration": "75 minutes",
+    "audience": "Students, parents, youth groups",
+    "delivery_format": "Micro-lessons plus reflection",
+    "summary": "Turn consent into practical communication habits for in-person and digital interactions.",
+    "tags": ["Consent", "Communication", "Boundaries"],
+    "outcomes": [
+      "Explain consent as informed, specific, freely given, and reversible.",
+      "Recognize pressure, guilt, silence, and imbalance as warning signs.",
+      "Use respectful boundary-setting language in real situations."
+    ],
+    "materials": ["Boundary phrases worksheet", "Healthy relationship markers", "Facilitator reflection prompts"],
+    "lessons": [
+      {
+        "title": "Define consent clearly",
+        "type": "Core concept",
+        "points": [
+          "Consent is an active and informed yes, not the absence of a no.",
+          "Consent can be withdrawn at any time.",
+          "A yes to one action does not mean yes to everything."
+        ]
+      },
+      {
+        "title": "Spot pressure patterns",
+        "type": "Scenario drill",
+        "points": [
+          "Silence under pressure is not enthusiastic agreement.",
+          "Repeated asking after a refusal is pressure, not healthy communication.",
+          "Sharing private images without permission is a serious boundary violation."
+        ]
+      },
+      {
+        "title": "Practice boundary language",
+        "type": "Skill drill",
+        "points": [
+          "Use simple direct statements: I am not comfortable with that.",
+          "Give young people language that is clear and repeatable.",
+          "Support the person who set the boundary instead of challenging them."
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Which statement best reflects consent?",
+        "options": ["Silence means yes", "Consent can be withdrawn at any time", "Pressure is acceptable if the relationship is close"],
+        "answer": 1,
+        "explanation": "Consent must remain voluntary and can always be withdrawn."
+      },
+      {
+        "question": "A repeated request after someone says no is:",
+        "options": ["Healthy curiosity", "Pressure", "A private issue that never matters"],
+        "answer": 1,
+        "explanation": "Repeated asking after refusal is pressure."
+      },
+      {
+        "question": "What helps create healthier boundaries?",
+        "options": ["Clear direct communication", "Avoiding every conversation", "Testing limits without asking"],
+        "answer": 0,
+        "explanation": "Clear direct communication lowers confusion and pressure."
+      }
+    ],
+    "prerequisites": ["harassment-response-foundations"],
+    "pathway": "Foundations",
+    "path_order": 2,
+    "badge": "Boundary badge",
+    "passing_score": 70,
+    "completion_criteria": ["Practice boundary language", "Score 70% or higher on the quiz"],
+    "source_url": "",
+    "license": "SafeEd Original (CC BY 4.0)",
+    "status": "published"
+  },
+  {
+    "slug": "digital-safety-and-scam-defense",
+    "title": "Digital safety and scam defense",
+    "category": "digital",
+    "duration": "80 minutes",
+    "audience": "Students, families, communities",
+    "delivery_format": "Checklist plus action drills",
+    "summary": "Protect accounts, spot scams faster, and respond quickly to cyber abuse or fraud.",
+    "tags": ["Cyber", "Privacy", "Scam defense"],
+    "outcomes": [
+      "Recognize phishing, impersonation, sextortion, and device takeover patterns.",
+      "Use password hygiene, account recovery tools, and privacy settings correctly.",
+      "Know when to use 1930 and the cybercrime portal."
+    ],
+    "materials": ["Account safety checklist", "Device hardening guide", "Evidence preservation quick card"],
+    "lessons": [
+      {
+        "title": "Protect key accounts",
+        "type": "Checklist",
+        "points": [
+          "Use a password manager and unique passwords where possible.",
+          "Enable two-factor authentication for email, banking, and social accounts.",
+          "Review recovery email and phone details regularly."
+        ]
+      },
+      {
+        "title": "Spot common scam patterns",
+        "type": "Scenario",
+        "points": [
+          "Urgent requests, payment pressure, and fake authority are common red flags.",
+          "Shortened links and spoofed contact names are often used in phishing attacks.",
+          "Do not send money or private images under digital pressure."
+        ]
+      },
+      {
+        "title": "Respond after compromise",
+        "type": "Action drill",
+        "points": [
+          "Change credentials from a trusted device.",
+          "Preserve screenshots and transaction details.",
+          "Use official reporting channels quickly when financial fraud is involved."
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Which sign is a common phishing indicator?",
+        "options": ["Unexpected urgency and a suspicious link", "A verified offline conversation", "A saved internal company note"],
+        "answer": 0,
+        "explanation": "Urgency plus suspicious links is a classic phishing pattern."
+      },
+      {
+        "question": "What should you do after account compromise?",
+        "options": ["Ignore it if access returns", "Change credentials and preserve evidence", "Post about it publicly first"],
+        "answer": 1,
+        "explanation": "Credential reset and evidence preservation are the immediate priorities."
+      },
+      {
+        "question": "1930 is most relevant for:",
+        "options": ["Cyber fraud and urgent digital financial response", "Restaurant reservations", "Changing classroom attendance"],
+        "answer": 0,
+        "explanation": "1930 is used for urgent cyber fraud support and reporting flow."
+      }
+    ],
+    "prerequisites": [],
+    "pathway": "Digital safety",
+    "path_order": 1,
+    "badge": "Digital defense badge",
+    "passing_score": 70,
+    "completion_criteria": ["Complete the checklist review", "Score 70% or higher on the quiz"],
+    "source_url": "https://cybercrime.gov.in/",
+    "license": "Public information references",
+    "status": "published"
+  },
+  {
+    "slug": "mental-health-first-response",
+    "title": "Mental health first response",
+    "category": "wellbeing",
+    "duration": "65 minutes",
+    "audience": "Educators, facilitators, peer leaders",
+    "delivery_format": "Support pathway brief",
+    "summary": "Use calm, non-judgmental first-response language and route people toward appropriate support.",
+    "tags": ["Wellbeing", "Peer support", "Referral"],
+    "outcomes": [
+      "Respond without diagnosing or minimizing someone else's distress.",
+      "Identify when a situation may need urgent or professional support.",
+      "Use referral language that is supportive and respectful."
+    ],
+    "materials": ["Support language sheet", "Referral matrix", "Conversation opener examples"],
+    "lessons": [
+      {
+        "title": "Start with safety and calm",
+        "type": "Core concept",
+        "points": [
+          "Use short, calm phrases and avoid judgment.",
+          "Check for immediate risk when someone sounds unsafe or overwhelmed.",
+          "Do not promise secrecy if urgent danger is involved."
+        ]
+      },
+      {
+        "title": "Listen without fixing everything",
+        "type": "Practice",
+        "points": [
+          "Listening is not the same as taking over the entire problem.",
+          "Reflect back what you heard and ask what support feels useful.",
+          "Do not force advice or timelines on the person."
+        ]
+      },
+      {
+        "title": "Refer when needed",
+        "type": "Decision support",
+        "points": [
+          "Use professional or official support when risk, self-harm, or persistent distress is present.",
+          "Tele-MANAS can be one support route for mental-health-related help.",
+          "Document urgent concerns if your setting has a safeguarding process."
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "question": "What is a better first response to distress?",
+        "options": ["Calm listening and checking safety", "Telling them to ignore it", "Diagnosing them immediately"],
+        "answer": 0,
+        "explanation": "Calm listening and checking safety is the appropriate first step."
+      },
+      {
+        "question": "When should secrecy not be promised?",
+        "options": ["When urgent safety risk exists", "Always, in every situation", "Never talk about support"],
+        "answer": 0,
+        "explanation": "Urgent safety issues may require escalation and support from others."
+      },
+      {
+        "question": "What is the goal of referral?",
+        "options": ["To pass people off without care", "To connect them with appropriate support", "To end the conversation quickly"],
+        "answer": 1,
+        "explanation": "Referral is about connecting people to appropriate help."
+      }
+    ],
+    "prerequisites": [],
+    "pathway": "Wellbeing",
+    "path_order": 1,
+    "badge": "Wellbeing badge",
+    "passing_score": 70,
+    "completion_criteria": ["Complete the referral matrix", "Score 70% or higher on the quiz"],
+    "source_url": "https://telemanas.mohfw.gov.in/",
+    "license": "Public information references",
+    "status": "published"
+  },
+  {
+    "slug": "reporting-and-referrals",
+    "title": "Reporting, documentation, and referrals",
+    "category": "response",
+    "duration": "70 minutes",
+    "audience": "Facilitators, HR teams, student leaders",
+    "delivery_format": "Operational playbook",
+    "summary": "Build a repeatable process for incident logging, referrals, internal follow-up, and official reporting.",
+    "tags": ["Reporting", "Operations", "Referral"],
+    "outcomes": [
+      "Create consistent incident records without over-collecting information.",
+      "Track status and next actions clearly.",
+      "Reduce delays between disclosure, support, and referral."
+    ],
+    "materials": ["Incident log template", "Status tracker", "Referral directory worksheet"],
+    "lessons": [
+      {
+        "title": "Create a lean incident log",
+        "type": "Template",
+        "points": [
+          "Capture what happened, who was involved, and what immediate support was requested.",
+          "Use neutral language and avoid speculation.",
+          "Track where the case was referred and who owns the next action."
+        ]
+      },
+      {
+        "title": "Manage follow-up",
+        "type": "Operations",
+        "points": [
+          "Assign an owner, next checkpoint, and current status.",
+          "Do not let serious issues disappear into informal chat threads.",
+          "Respect confidentiality while keeping action visible to the right people."
+        ]
+      },
+      {
+        "title": "Know official routes",
+        "type": "Directory",
+        "points": [
+          "Use 112 for immediate emergency risk.",
+          "Use official cybercrime and women's channels when relevant.",
+          "Use institutional routes only if they are safe and functional."
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "question": "What makes an incident log useful?",
+        "options": ["Neutral facts and clear next actions", "Only emotional reactions", "No dates or status information"],
+        "answer": 0,
+        "explanation": "A useful record captures facts and the next step."
+      },
+      {
+        "question": "Why assign an owner to follow-up?",
+        "options": ["To reduce confusion and delay", "To make the issue look closed", "To avoid writing anything down"],
+        "answer": 0,
+        "explanation": "Without ownership, follow-up often stalls."
+      },
+      {
+        "question": "Which route comes first in immediate danger?",
+        "options": ["112", "Only a later team meeting", "A poster redesign"],
+        "answer": 0,
+        "explanation": "Immediate safety issues should go to emergency response."
+      }
+    ],
+    "prerequisites": ["harassment-response-foundations"],
+    "pathway": "Operations",
+    "path_order": 1,
+    "badge": "Operations badge",
+    "passing_score": 70,
+    "completion_criteria": ["Complete the incident log template", "Score 70% or higher on the quiz"],
+    "source_url": "",
+    "license": "SafeEd Original (CC BY 4.0)",
+    "status": "published"
+  },
+  {
+    "slug": "bystander-leadership",
+    "title": "Bystander leadership and community safety",
+    "category": "leadership",
+    "duration": "85 minutes",
+    "audience": "Clubs, NGOs, resident groups, workplaces",
+    "delivery_format": "Workshop module",
+    "summary": "Build safer intervention habits that balance courage, personal safety, and group responsibility.",
+    "tags": ["Bystander", "Leadership", "Community"],
+    "outcomes": [
+      "Choose between direct intervention, distraction, delegation, documentation, and delayed support.",
+      "Understand when not to intervene alone.",
+      "Translate one-off workshops into community norms and follow-up routines."
+    ],
+    "materials": ["Intervention matrix", "Community charter prompt", "Facilitator debrief sheet"],
+    "lessons": [
+      {
+        "title": "Choose the right intervention style",
+        "type": "Matrix",
+        "points": [
+          "Direct action is not always the safest option.",
+          "Delegation is powerful when formal authority or backup is needed.",
+          "Delayed support still matters if immediate intervention is unsafe."
+        ]
+      },
+      {
+        "title": "Protect yourself while helping",
+        "type": "Risk check",
+        "points": [
+          "Intervention should not create new serious harm.",
+          "Call for backup when power differences or violence risk are high.",
+          "Document and escalate when witnessing digital or public abuse."
+        ]
+      },
+      {
+        "title": "Build group habits",
+        "type": "Facilitation",
+        "points": [
+          "Set clear behavior norms and reporting reminders in teams or clubs.",
+          "Use brief refresher sessions instead of only one annual event.",
+          "Review real examples and what the group learned from them."
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Which option is part of bystander intervention?",
+        "options": ["Delegation", "Ignoring risk", "Public shaming only"],
+        "answer": 0,
+        "explanation": "Delegation is one of the safer intervention methods."
+      },
+      {
+        "question": "When should you avoid intervening alone?",
+        "options": ["When violence or serious escalation risk is high", "When a problem is small enough to ignore forever", "Always, without exception"],
+        "answer": 0,
+        "explanation": "High-risk situations may require backup or formal channels."
+      },
+      {
+        "question": "What makes a workshop culture stick?",
+        "options": ["Repeatable norms and follow-up", "One poster and nothing else", "Silence after the session"],
+        "answer": 0,
+        "explanation": "Repetition and follow-up turn awareness into culture."
+      }
+    ],
+    "prerequisites": ["harassment-response-foundations"],
+    "pathway": "Leadership",
+    "path_order": 1,
+    "badge": "Bystander badge",
+    "passing_score": 70,
+    "completion_criteria": ["Complete the intervention matrix", "Score 70% or higher on the quiz"],
+    "source_url": "",
+    "license": "SafeEd Original (CC BY 4.0)",
+    "status": "published"
+  }
+]

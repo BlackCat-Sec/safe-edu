@@ -611,6 +611,7 @@ select:focus-visible {
 
 .planner-form input,
 .planner-form select,
+.planner-form textarea,
 .search-field input {
   min-height: 52px;
   width: 100%;
@@ -619,6 +620,11 @@ select:focus-visible {
   border: 1px solid var(--line-strong);
   background: var(--surface-strong);
   color: var(--text);
+}
+
+.planner-form textarea {
+  min-height: 140px;
+  resize: vertical;
 }
 
 .planner-output__header h3 {
@@ -761,6 +767,23 @@ select:focus-visible {
   background: var(--primary-soft);
   color: var(--primary);
   font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.25rem 0;
+}
+
+.meta-pill {
+  display: inline-flex;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: color-mix(in srgb, var(--accent) 70%, black);
+  font-size: 0.78rem;
   font-weight: 800;
 }
 
@@ -1090,6 +1113,382 @@ select:focus-visible {
   text-decoration: none;
 }
 
+.section-heading--tight {
+  margin-bottom: 1.25rem;
+}
+
+.session-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.user-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0.75rem 0.95rem;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-weight: 800;
+}
+
+.user-chip small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.dashboard-shell,
+.admin-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.dashboard-grid,
+.admin-summary-grid,
+.management-grid,
+.item-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.dashboard-grid,
+.admin-summary-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.dashboard-card,
+.admin-card,
+.list-card,
+.report-card {
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.dashboard-card strong,
+.admin-card strong {
+  display: block;
+  font-family: "Sora", "Manrope", sans-serif;
+  font-size: 1.85rem;
+  line-height: 1;
+}
+
+.dashboard-card span,
+.admin-card span {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--muted);
+}
+
+.dashboard-stack,
+.admin-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.empty-state {
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--line-strong);
+  color: var(--muted);
+  background: color-mix(in srgb, var(--surface) 86%, transparent);
+}
+
+.report-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+  gap: 1.5rem 2rem;
+  align-items: start;
+}
+
+.report-layout > .section-heading {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.auth-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.auth-toggle-row,
+.inline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.auth-note {
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.auth-note p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+.locale-switcher {
+  display: inline-flex;
+  align-items: center;
+}
+
+.locale-select {
+  min-height: 44px;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.footer-meta {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.report-extra-fields {
+  display: grid;
+  gap: 1rem;
+}
+
+.planner-next-steps {
+  margin-top: 1.5rem;
+}
+
+.planner-next-steps h4 {
+  margin: 0 0 0.6rem;
+  font-family: "Sora", "Manrope", sans-serif;
+}
+
+.dashboard-actions {
+  display: grid;
+  gap: 1rem;
+}
+
+.draft-panel {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--line-strong);
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+}
+
+.file-input {
+  min-height: 44px;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.metric-grid .metric-card p,
+.list-card p,
+.report-card p,
+.admin-card p {
+  color: var(--muted);
+}
+
+.management-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.list-card__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.list-card__header h3,
+.dashboard-stack h3,
+.admin-stack h3 {
+  margin: 0;
+  font-family: "Sora", "Manrope", sans-serif;
+  line-height: 1.16;
+}
+
+.item-list__row,
+.report-card {
+  display: grid;
+  gap: 0.65rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+}
+
+.report-card textarea,
+.report-card input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.7rem 0.85rem;
+  border-radius: 14px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+.report-card textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.item-list__row h4,
+.report-card h4 {
+  margin: 0;
+  font-family: "Sora", "Manrope", sans-serif;
+  font-size: 1rem;
+}
+
+.item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.field-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.field-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.admin-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.admin-form label {
+  display: grid;
+  gap: 0.45rem;
+  font-weight: 700;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+  min-height: 48px;
+  width: 100%;
+  padding: 0.8rem 0.95rem;
+  border-radius: 16px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface-strong);
+  color: var(--text);
+}
+
+.admin-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.dialog-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.lessons-list,
+.quiz-form,
+.quiz-results {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.lesson-card,
+.quiz-question,
+.quiz-result {
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.lesson-card h4,
+.quiz-question h4,
+.quiz-result h4 {
+  margin: 0 0 0.45rem;
+  font-family: "Sora", "Manrope", sans-serif;
+  font-size: 1rem;
+}
+
+.bullet-list {
+  padding-left: 1.1rem;
+  margin: 0.55rem 0 0;
+}
+
+.bullet-list li + li {
+  margin-top: 0.35rem;
+}
+
+.option-list {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.85rem;
+}
+
+.option-row {
+  display: flex;
+  gap: 0.65rem;
+  align-items: start;
+  padding: 0.7rem 0.8rem;
+  border-radius: 14px;
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+}
+
+.option-row input {
+  margin-top: 0.18rem;
+}
+
+.quiz-result--correct {
+  border-color: color-mix(in srgb, var(--success) 40%, var(--line));
+}
+
+.quiz-result--incorrect {
+  border-color: color-mix(in srgb, var(--danger) 40%, var(--line));
+}
+
+.helper-copy {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -1117,6 +1516,7 @@ select:focus-visible {
   }
 
   .planner-layout,
+  .report-layout,
   .hero-grid,
   .action-layout,
   .dialog-grid {
@@ -1178,6 +1578,13 @@ select:focus-visible {
   .footer-grid {
     grid-template-columns: 1fr;
   }
+
+  .dashboard-grid,
+  .admin-summary-grid,
+  .management-grid,
+  .field-grid--two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -1212,9 +1619,19 @@ select:focus-visible {
     grid-template-columns: 1fr;
   }
 
+  .session-controls {
+    width: 100%;
+  }
+
+  .session-controls > * {
+    width: 100%;
+  }
+
   .hero-actions,
   .track-card__actions,
-  .resource-card__actions {
+  .resource-card__actions,
+  .inline-actions,
+  .auth-toggle-row {
     flex-direction: column;
     align-items: stretch;
   }
@@ -1230,6 +1647,13 @@ select:focus-visible {
 
   .track-dialog {
     width: calc(100% - 0.5rem);
+  }
+
+  .dashboard-grid,
+  .admin-summary-grid,
+  .management-grid,
+  .field-grid--two {
+    grid-template-columns: 1fr;
   }
 }
 

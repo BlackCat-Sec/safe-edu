@@ -1,0 +1,119 @@
+{
+  "report_categories": ["Harassment", "Digital safety", "Mental health", "Workplace safety", "General support"],
+  "report_urgency": ["Standard", "Priority", "Urgent"],
+  "report_statuses": ["New", "In review", "Resolved", "Closed"],
+  "category_fields": {
+    "Harassment": [
+      { "id": "location", "label": "Location or context", "type": "text", "required": false },
+      { "id": "date", "label": "Date of incident", "type": "date", "required": false },
+      { "id": "evidence", "label": "Evidence saved (yes or no)", "type": "text", "required": false }
+    ],
+    "Digital safety": [
+      { "id": "platform", "label": "Platform or app", "type": "text", "required": false },
+      { "id": "account", "label": "Account impacted", "type": "text", "required": false },
+      { "id": "loss", "label": "Financial loss (if any)", "type": "text", "required": false }
+    ],
+    "Mental health": [
+      { "id": "support_needed", "label": "Type of support needed", "type": "text", "required": false },
+      { "id": "risk_level", "label": "Immediate safety risk", "type": "text", "required": false }
+    ],
+    "Workplace safety": [
+      { "id": "department", "label": "Department or team", "type": "text", "required": false },
+      { "id": "reporting_route", "label": "Internal route used", "type": "text", "required": false }
+    ],
+    "General support": [
+      { "id": "context", "label": "Context or setting", "type": "text", "required": false }
+    ]
+  },
+  "next_steps": {
+    "Harassment": {
+      "Standard": [
+        "Document facts, dates, and evidence in a safe place.",
+        "Use internal reporting or official channels if available.",
+        "Reach out to a trusted support contact for guidance."
+      ],
+      "Priority": [
+        "Prioritize safety and support for those impacted.",
+        "Escalate to official channels if internal routes are unsafe.",
+        "Preserve evidence without sharing it broadly."
+      ],
+      "Urgent": [
+        "If there is immediate danger, call 112 first.",
+        "Move to a safe location and reach out to emergency support.",
+        "Record only essential facts for follow-up."
+      ]
+    },
+    "Digital safety": {
+      "Standard": [
+        "Change passwords and enable two-factor authentication.",
+        "Preserve screenshots and transaction details.",
+        "Consider filing a report on the cybercrime portal."
+      ],
+      "Priority": [
+        "Call 1930 quickly if financial fraud is involved.",
+        "Secure accounts from a trusted device.",
+        "Record the timeline of events and evidence."
+      ],
+      "Urgent": [
+        "Call 1930 for urgent digital fraud response.",
+        "Freeze compromised accounts or payment instruments.",
+        "Reach out to official reporting channels immediately."
+      ]
+    },
+    "Mental health": {
+      "Standard": [
+        "Use calm, supportive language and check in regularly.",
+        "Offer to connect them with local or official support.",
+        "Avoid promising secrecy if urgent risk is present."
+      ],
+      "Priority": [
+        "If distress is high, suggest contacting Tele-MANAS.",
+        "Stay with the person or arrange trusted support.",
+        "Follow any local safeguarding policy."
+      ],
+      "Urgent": [
+        "If immediate safety risk exists, contact emergency services.",
+        "Reach out to Tele-MANAS or local crisis lines.",
+        "Do not delay urgent support."
+      ]
+    },
+    "Workplace safety": {
+      "Standard": [
+        "Use official reporting mechanisms where safe.",
+        "Document facts and identify a trusted internal contact.",
+        "Track status and next actions."
+      ],
+      "Priority": [
+        "Escalate to formal HR or compliance channels quickly.",
+        "Ensure the person impacted has support.",
+        "Preserve documentation."
+      ],
+      "Urgent": [
+        "Prioritize immediate safety and official response.",
+        "Contact emergency services if necessary.",
+        "Avoid informal-only handling for urgent risk."
+      ]
+    },
+    "General support": {
+      "Standard": [
+        "Identify the safest support route available.",
+        "Document key facts and preferences.",
+        "Follow up with a clear next step."
+      ],
+      "Priority": [
+        "Use trusted support channels for quicker response.",
+        "Document details to reduce repeat retelling.",
+        "Confirm next check-in time."
+      ],
+      "Urgent": [
+        "If immediate danger is present, call 112.",
+        "Use official emergency or specialist support routes.",
+        "Share only essential information for safety."
+      ]
+    }
+  },
+  "locales": {
+    "default": "en-IN",
+    "supported": ["en-IN", "hi-IN"]
+  }
+}
